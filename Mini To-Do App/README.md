@@ -5,4 +5,4 @@ Aplicación web interactiva desarrollada con React, JavaScript (ES6), HTML y CSS
 ## Integrantes del equipo
 * Rivera Zevada Angel Antonio
 * Mendoza Mora Luis Octavio
-----------Grupo 2-4-----------
+Grupo 2-4
