@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #eef2f6;
+  color: #1e293b;
+}
+
+/* Centrado con Flexbox */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
+
+/* Tarjeta principal */
+.todo-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.todo-card h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: #0f172a;
+}
+
+/* Formulario */
+.task-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.task-form input:focus {
+  border-color: #2563eb;
+}
+
+/* Botones generales */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Botón Azul: Agregar */
+.btn-add {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+}
+
+.btn-add:hover {
+  background-color: #1d4ed8;
+}
+
+/* Filtros */
+.task-filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.task-filters button {
+  background-color: #f1f5f9;
+  color: #475569;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.task-filters button:hover {
+  background-color: #e2e8f0;
+}
+
+.task-filters button.active {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* Lista de tareas */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.empty-message {
+  text-align: center;
+  color: #64748b;
+  padding: 1.5rem 0;
+  font-style: italic;
+}
+
+/* Tarea individual */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.task-item:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+/* Checkbox con acento Verde para completado */
+.task-content input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #16a34a;
+  cursor: pointer;
+}
+
+.task-text {
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+/* Estado visual cuando está completada */
+.task-item.completed {
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #15803d;
+}
+
+/* Botón Rojo: Eliminar */
+.btn-delete {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+/* Contador / Pie de página */
+.task-stats {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
